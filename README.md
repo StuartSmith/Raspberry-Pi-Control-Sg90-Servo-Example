@@ -7,4 +7,8 @@ An SG90 server  is controled by a pulse being sent to it, different lengths of p
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/ServoDiagramImage.PNG "")
 
+from the diagram we can see that the brown wire to the server should go to ground the red is the positive current and the orange is the pusle.
+
+A pulse is where we send a pulse of high polarity from a GPIO pin for a certain amount of time which which will make the motor turn one way or the other.
+
 
