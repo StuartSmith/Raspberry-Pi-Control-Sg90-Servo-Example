@@ -17,7 +17,7 @@ From the diagram; we can see that the brown wire goes to ground, the red is the 
 
 A pulse is where we send a pulse of high polarity from a GPIO pin for a certain amount of time which which will make the motor turn one way or the other.
 
-The amount of time we send a pulse determines where the servo will move
+The amount of time the pulse is sent, determines where the servo will move.
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/PulseControl.jpg "")
 
