@@ -18,6 +18,9 @@ From the diagram; we can see that the brown wire goes to ground, the red is the 
 A pulse is where we send a pulse of high polarity from a GPIO pin for a certain amount of time which which will make the motor turn one way or the other.
 
 ###Wiring Diagram:
+<p>
 To wire the servo to the rasberry pi is farily straight foreward the ground of the servo with go to pin 2 (Positive 5V), the positive wire from the servo will go to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29 (GPIO 5)
+</p>
+
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/ServoDiagramImage.PNG "")
 
