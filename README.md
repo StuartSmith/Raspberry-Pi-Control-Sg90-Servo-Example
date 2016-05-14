@@ -19,6 +19,12 @@ A pulse is where we send a pulse of high polarity from a GPIO pin for a certain 
 
 The amount of time we send a pulse determines where the servo will move
 
+![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/PulseControl.jpg "")
+
+* A pulse of 1 millisecond will move the servo towards 0 degrees
+* A pulse of 1.5 millisecond will move the servo towards 90 degrees
+* A pulse of 2  millisecond will move the servo towards 180 degrees
+
 
 
 ###Wiring Diagram:
