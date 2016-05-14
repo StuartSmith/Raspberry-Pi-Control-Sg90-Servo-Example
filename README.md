@@ -4,7 +4,7 @@ This project is how to control an SG90 server from a respberry pi using Windows 
 <img style="float:left;" src="https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/Sketchsg90.jpg">
 </p>
 <p>
-An SG 90 is a servor used to control different pieces of equipment. It is a favorite among hobbyist who fly drones and helicopters because of it's light weight.
+An SG 90 is a servro used to control different pieces of equipment. It is a favorite among hobbyist who fly drones and helicopters because of it's light weight.
 </p>
 
 
