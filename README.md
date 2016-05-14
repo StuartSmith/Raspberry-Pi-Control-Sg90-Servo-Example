@@ -1,9 +1,11 @@
 # RaspberryPi-Control-SG90-Example
-This project is how to control an SG90 server from a respberry pi using Windows 10
 
-An SG 90 is a servor used to control different pieces of equipment. It is a favorite for hobbyist who fly drones and helicopters because of it's light weight.
+This project is how to control an SG90 server from a respberry pi using Windows 10.
+<img style="float:left;" src="https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/Sketchsg90.jpg">
+An SG 90 is a servor used to control different pieces of equipment. It is a favorite among hobbyist who fly drones and helicopters because of it's light weight.
 
-An SG90 server  is controled by a pulse being sent to it over a 20 millisecond time span, different lengths of pulse deteremine how the motor will turn. But before we get into how to control the motor lest first look at how to connect the Sg90 to the rasberry pi.
+
+An SG90 server  is controled by a pulse being sent to it over a 20 millisecond time span, different lengths of pulse deteremine how the motor will turn. But before we get into how to control the motor lets first look at how to connect the Sg90 to the rasberry pi.
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/ServoDiagramImage.PNG "")
 
