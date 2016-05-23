@@ -7,7 +7,134 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Loaded="Page_Loaded">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ControlTemplate x:Key="ButtonControlTemplate1" TargetType="Button">
+            <Grid>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Target="path.(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Value=".9"/>
+                                <Setter Target="path.(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Value=".9"/>
+                                <Setter Target="path.(Shape.Fill)">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF3a17FF" Offset="0"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled"/>
+                        <VisualState x:Name="PointerOver"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+
+                <!-- <Path d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" UseLayoutRounding="False" Stroke="Black" Stretch="Fill" Opacity="0.5"  Fill="#FFF4F4F5" Data="M168.001,5.99951 L158,1.99951 C67.3629,152.79 53.825,292.34 204,432 L196,518 L326,430 L228,268 L219,346 C135.001,285 119.676,153.114 168.001,5.99951 z"/>-->
+                <Path x:Name="path" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" UseLayoutRounding="False" Stretch="Fill" Data="M162.668,8.99967 L158.335,6.66667 C50.6678,191.333 93.7061,332.874 212.436,433.087 L203.255,509.502 L326.624,432.097 L234.815,284.216 L228.001,357.333 C126.939,313.515 98.2485,168.603 162.668,8.99967 z" RenderTransformOrigin="0.5,0.5" Stroke="#FF2800FF">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF2800FF" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                    <Path.RenderTransform>
+                        <CompositeTransform/>
+                    </Path.RenderTransform>
+                </Path>
+
+            </Grid>
+        </ControlTemplate>
+        <Style x:Key="ButtonStyle1" TargetType="Button">
+            <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
+            <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundTransparentBrush}"/>
+            <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
+            <Setter Property="Padding" Value="8,4,8,4"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="UseSystemFocusVisuals" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseMediumLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="640" Height="360" VerticalAlignment="Top">
+        <Rectangle x:Name="RectangleCenter" Fill="#FFF4F4F5" Height="18" Margin="10,0,0,166" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="350"/>
+        <Button x:Name="btnRotateToOneEighty" Content="Button" HorizontalAlignment="Stretch" Margin="193.794,0,300.836,71.314" VerticalAlignment="Bottom" Template="{StaticResource ButtonControlTemplate1}" RenderTransformOrigin="0.5,0.5" Height="106.136" UseLayoutRounding="False" d:LayoutRounding="Auto" d:LayoutOverrides="VerticalAlignment, LeftPosition, RightPosition">
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="-32.133"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnRotateTo90FromTheLeft" Content="Button" HorizontalAlignment="Left" Margin="15.279,71.714,0,197.982" VerticalAlignment="Stretch" Template="{StaticResource ButtonControlTemplate1}" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="128" d:LayoutRounding="Auto" d:LayoutOverrides="TopPosition, BottomPosition">
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="1.623" ScaleY="-1"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnRotateTozero" Content="Button" HorizontalAlignment="Left" Margin="19.794,0,0,73.314" VerticalAlignment="Bottom" Template="{StaticResource ButtonControlTemplate1}" RenderTransformOrigin="0.5,0.5" Height="106.136" UseLayoutRounding="False" d:LayoutRounding="Auto" d:LayoutOverrides="VerticalAlignment" Width="145.37">
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="32.132999420166016" ScaleX="-1"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnRotateTo90FromTheRight" Content="Button" HorizontalAlignment="Stretch" Margin="209.279,71.714,302.721,197.982" VerticalAlignment="Stretch" Template="{StaticResource ButtonControlTemplate1}" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition">
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="-1.6230000257492065" ScaleY="-1" ScaleX="-1"/>
+            </Button.RenderTransform>
+        </Button>
+        <Rectangle x:Name="RectTop" Fill="#FFF4F4F5" Height="37" Margin="10,0,0,313" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="350"/>
+        <Rectangle x:Name="RectBottom" Fill="#FFF4F4F5" Height="37" Margin="10,0,0,10" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="350" d:LayoutOverrides="VerticalAlignment"/>
+        <TextBlock x:Name="textBlock" Height="37" Margin="59,0,0,10" TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="251" FontSize="21.333">
+        	<Run Text="Rotate Away From "/>
+        	<Run Text="Ninety Degrees"/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy" Height="37" Margin="10,10,280,0" TextWrapping="Wrap" Text="Rotate Towards From Ninety Degrees" VerticalAlignment="Top" FontSize="21.333" d:LayoutOverrides="LeftPosition, RightPosition"/>
+        <TextBlock x:Name="textBlock_Copy1" Height="37" Margin="154,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" FontSize="24" FontWeight="Bold">
+        	<Run Text="90"/>
+        	<Run Text="%"/>
+        </TextBlock>
 
     </Grid>
 </Page>
