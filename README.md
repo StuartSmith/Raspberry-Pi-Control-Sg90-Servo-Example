@@ -43,6 +43,9 @@ Wiring the servo to the Rasberry Pi is rather straight foreward: the ground of t
 <br>
 <br>
 
+###Video of SG90
+[![SG90 in action](http://img.youtube.com/vi/v_Ni77Dx_HM/0.jpg)](http://www.youtube.com/watch?v=v_Ni77Dx_HM
+
 ###Source code
 
 The SG 90 servo  is controlled through one object SG90MotorControlle; below is the source code. The object will turn an SG90 servo motor all the way to the right, left or middle. 
