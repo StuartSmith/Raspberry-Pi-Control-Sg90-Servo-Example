@@ -44,7 +44,7 @@ Wiring the servo to the Rasberry Pi is rather straight foreward: the ground of t
 <br>
 
 ###Video of SG90
-[![SG90 in action](http://img.youtube.com/vi/v_Ni77Dx_HM/0.jpg)](http://www.youtube.com/watch?v=v_Ni77Dx_HM
+[![SG90 in action](http://img.youtube.com/vi/v_Ni77Dx_HM/0.jpg)](http://www.youtube.com/watch?v=v_Ni77Dx_HM)
 
 ###Source code
 
