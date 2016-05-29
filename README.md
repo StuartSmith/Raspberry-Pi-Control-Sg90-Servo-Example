@@ -40,17 +40,6 @@ A pulse is where a signal of high polarity sent from a GPIO of the Raspberry Pi 
 * A pulse of 2  millisecond will move the servo towards 180 degrees
 <br><br>
 
-###Wiring Diagram:
-<p>
-Wiring the servo to the Raspberry Pi is rather straight foreward: the ground of the servo is connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29 (GPIO 5).
-</p>
-
-![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/GPIOWiringDiagram.png "")
-<br>
-<br>
-
-
-
 
 ####Video of SG90
 Click on the image to watch the video<br>
