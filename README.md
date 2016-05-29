@@ -5,11 +5,11 @@ How to control an SG90 servo from a Raspberry Pi using Windows 10 IOT core.
 </p>
 <p>
 <img style="float:left;" src="https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/Sketchsg90.jpg">
-An SG90 is a servo used to control different pieces of equipment. It is a favorite among hobbyist who fly drones and helicopters, because of it's light weight.
+An SG90 is a servo used to control different pieces of equipment. It is a favorite among hobbyist who fly drones and helicopters, because of its light weight.
 </p>
 
 
-An SG90 servo is controled by a pulse sent to it over a 20 millisecond time span, different lengths of pulse deteremine how the motor will turn. But before we get into how to control the motor, lets first look at how to connect the SG90 to the Rasberry Pi.
+An SG90 servo is controlled by a pulse sent to it over a 20 millisecond time span, different lengths of pulse determine how the motor will turn. But before we get into how to control the motor, lets first look at how to connect the SG90 to the Raspberry Pi.
 
 ###Wiring Diagram:
 <p>
