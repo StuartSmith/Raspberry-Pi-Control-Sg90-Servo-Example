@@ -9,17 +9,17 @@ An SG 90 is a servo used to control different pieces of equipment. It is a favor
 </p>
 
 
-An SG90 server  is controled by a pulse being sent to it over a 20 millisecond time span, different lengths of pulse deteremine how the motor will turn. But before we get into how to control the motor, lets first look at how to connect the Sg90 to the rasberry pi.
+SG90 servos are controled by a pulse sent to them over a 20 millisecond time span, different lengths of pulse deteremine how the motor will turn. But before we get into how to control the motor, lets first look at how to connect the SG90 to the Rasberry Pi.
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/ServoDiagramImage.PNG "")
 
 From the diagram; we can see that the brown wire goes to ground, the red is the positive current and the orange is the pulse.
 
-A pulse is where a pulse of high polarity is sent from a GPIO pin for a certain amount of time, which will make the motor turn one way or  the other.
+A pulse is where a signal of high polarity is sent from a GPIO pin for a certain amount of time, which will make the motor turn in one direction or the other.
 <br><br>
 
 ###Pulse Control Diagram:
-The amount of time the pulse is sent, determines where the servo will move.
+The amount of time the pulse is sent, determines how the servo will move.
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/PulseControl.jpg "")
 
@@ -36,7 +36,7 @@ The amount of time the pulse is sent, determines where the servo will move.
 
 ###Wiring Diagram:
 <p>
-Wiring the servo to the rasberry pi is rather straight foreward: the ground of the servo is connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29 (GPIO 5)
+Wiring the servo to the Rasberry Pi is rather straight foreward: the ground of the servo is connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29 (GPIO 5)
 </p>
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/GPIOWiringDiagram.png "")
