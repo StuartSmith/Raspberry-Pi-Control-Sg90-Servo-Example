@@ -24,11 +24,11 @@ Wiring the servo to the Rasberry Pi is rather straight foreward: the ground of t
 
 
 
-A pulse is where a signal of high polarity is sent from a GPIO of the Raspberry Pi pin for a certain amount of time, which will make the motor turn in one direction or the other.
+
 <br><br>
 
 ###Pulse Control Diagram:
-The amount of time the pulse is sent, determines how the servo will rotate.
+A pulse is where a signal of high polarity is sent from a GPIO of the Raspberry Pi pin for a certain amount of time, which will make the motor turn in one direction or the other. The amount of time the pulse is sent, determines how the servo will rotate.
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/PulseControl.jpg "")
 
