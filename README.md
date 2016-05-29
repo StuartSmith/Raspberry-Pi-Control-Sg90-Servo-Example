@@ -11,9 +11,18 @@ An SG90 is a servo used to control different pieces of equipment. It is a favori
 
 An SG90 servo is controled by a pulse sent to it over a 20 millisecond time span, different lengths of pulse deteremine how the motor will turn. But before we get into how to control the motor, lets first look at how to connect the SG90 to the Rasberry Pi.
 
+###Wiring Diagram:
+<p>
+Wiring the servo to the Rasberry Pi is rather straight foreward: the ground of the servo is connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29 (GPIO 5)
+</p>
+
+![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/GPIOWiringDiagram.png "")
+<br>
+<br>
+
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/ServoDiagramImage.PNG "")
 
-From the diagram; we can see that the brown wire goes to ground, the red is the positive current and the orange is the pulse.
+
 
 A pulse is where a signal of high polarity is sent from a GPIO of the Raspberry Pi pin for a certain amount of time, which will make the motor turn in one direction or the other.
 <br><br>
