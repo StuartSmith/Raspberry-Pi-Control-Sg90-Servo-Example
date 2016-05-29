@@ -1,6 +1,6 @@
 # RaspberryPi-Control-SG90-Example
 <p>
-This project is how to control an SG90 servo from a respberry pi using Windows 10 IOT core.
+How to control an SG90 servo from a respberry pi using Windows 10 IOT core.
 
 </p>
 <p>
@@ -9,17 +9,17 @@ An SG 90 is a servo used to control different pieces of equipment. It is a favor
 </p>
 
 
-SG90 servos are controled by a pulse sent to them over a 20 millisecond time span, different lengths of pulse deteremine how the motor will turn. But before we get into how to control the motor, lets first look at how to connect the SG90 to the Rasberry Pi.
+An SG90 servo is controled by a pulse sent to it over a 20 millisecond time span, different lengths of pulse deteremine how the motor will turn. But before we get into how to control the motor, lets first look at how to connect the SG90 to the Rasberry Pi.
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/ServoDiagramImage.PNG "")
 
 From the diagram; we can see that the brown wire goes to ground, the red is the positive current and the orange is the pulse.
 
-A pulse is where a signal of high polarity is sent from a GPIO pin for a certain amount of time, which will make the motor turn in one direction or the other.
+A pulse is where a signal of high polarity is sent from a GPIO of the Raspberry Pi pin for a certain amount of time, which will make the motor turn in one direction or the other.
 <br><br>
 
 ###Pulse Control Diagram:
-The amount of time the pulse is sent, determines how the servo will move.
+The amount of time the pulse is sent, determines how the servo will rotate.
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/PulseControl.jpg "")
 
