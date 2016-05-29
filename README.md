@@ -22,13 +22,10 @@ Wiring the servo to the Rasberry Pi is rather straight foreward: the ground of t
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/ServoDiagramImage.PNG "")
 
-
-
-
 <br><br>
 
 ###Pulse Control Diagram:
-A pulse is where a signal of high polarity is sent from a GPIO of the Raspberry Pi pin for a certain amount of time, which will make the motor turn in one direction or the other. The amount of time the pulse is sent, determines how the servo will rotate.
+A pulse is where a signal of high polarity sent from a GPIO of the Raspberry Pi pin to SG90 Servo, for a certain amount of time, which will make the motor turn in one direction or the other. The duration of time between pulses must add up to 20 milliseconds. If a pusle is one millisecond the next pulse, sent to the servo must take place no sooner than 19 milliseconds later. The amount of time the pulse is sent, determines how the servo will rotate. For example if a pulse is sent to the SG90 for 1 millisecond the motor will move towards 0.
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/PulseControl.jpg "")
 
@@ -45,7 +42,7 @@ A pulse is where a signal of high polarity is sent from a GPIO of the Raspberry 
 
 ###Wiring Diagram:
 <p>
-Wiring the servo to the Rasberry Pi is rather straight foreward: the ground of the servo is connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29 (GPIO 5)
+Wiring the servo to the Rasberry Pi is rather straight foreward: the ground of the servo is connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29. (GPIO 5)
 </p>
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/GPIOWiringDiagram.png "")
@@ -61,7 +58,7 @@ Click on the image to watch the video<br>
 
 ####Source code
 
-The SG 90 servo  is controlled through one object SG90MotorControlle; below is the source code. The object will turn an SG90 servo motor all the way to the right, left or middle. 
+The SG 90 servo is controlled through one object SG90MotorController, below is the source code. The class will turn an SG90 servo motor to the right, left or middle. 
 <br>
 
 namespace ControlSg90Example
