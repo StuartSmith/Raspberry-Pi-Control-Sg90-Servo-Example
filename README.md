@@ -36,7 +36,7 @@ The amount of time the pulse is sent, determines where the servo will move.
 
 ###Wiring Diagram:
 <p>
-Wiring the servo to the rasberry pi is rather straight foreward; the ground of the servo id connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29 (GPIO 5)
+Wiring the servo to the rasberry pi is rather straight foreward: the ground of the servo is connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29 (GPIO 5)
 </p>
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/GPIOWiringDiagram.png "")
