@@ -88,7 +88,7 @@ namespace ControlSg90Example
         /// Sends a pulse to the server motor that will 
         /// turn it in one direction or another
         /// </summary>
-        /// <param name="rotateServer">Enumeration for rotating the server</param>
+        /// <param name="rotateServer">Enumeration for rotating the server</param>        
         public void PulseMotor(RotateServer rotateServer)
         {
             PulseMotor(ServoPulseTime(rotateServer));      
@@ -108,6 +108,7 @@ namespace ControlSg90Example
             while (sw.ElapsedTicks < durationTicks)
             {
                 int x = 3;
+                x = x + x;
             }
         }
 

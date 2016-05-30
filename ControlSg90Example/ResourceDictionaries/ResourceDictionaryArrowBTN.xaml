@@ -1,0 +1,45 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ControlSg90Example">
+    <ControlTemplate x:Key="ArrowButtonTemplate" TargetType="Button">
+        <Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal"/>
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Target="path.(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Value=".9"/>
+                            <Setter Target="path.(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Value=".9"/>
+                            <Setter Target="path.(Shape.Fill)">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF3a17FF" Offset="0"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled"/>
+                    <VisualState x:Name="PointerOver"/>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+
+            <!-- <Path d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" UseLayoutRounding="False" Stroke="Black" Stretch="Fill" Opacity="0.5"  Fill="#FFF4F4F5" Data="M168.001,5.99951 L158,1.99951 C67.3629,152.79 53.825,292.34 204,432 L196,518 L326,430 L228,268 L219,346 C135.001,285 119.676,153.114 168.001,5.99951 z"/>-->
+            <Path x:Name="path" UseLayoutRounding="False" Stretch="Fill" Data="M162.668,8.99967 L158.335,6.66667 C50.6678,191.333 93.7061,332.874 212.436,433.087 L203.255,509.502 L326.624,432.097 L234.815,284.216 L228.001,357.333 C126.939,313.515 98.2485,168.603 162.668,8.99967 z" RenderTransformOrigin="0.5,0.5" Stroke="#FF2800FF">
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2800FF" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.RenderTransform>
+                    <CompositeTransform/>
+                </Path.RenderTransform>
+            </Path>
+
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>
