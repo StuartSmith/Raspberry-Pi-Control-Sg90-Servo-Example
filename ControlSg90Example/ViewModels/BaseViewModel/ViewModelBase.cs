@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace ControlSg90Example.ViewModels.BaseViewModel
 {
-    public class ViewModelBase
+    public class ViewModelBase:INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged = delegate { }; 
 
