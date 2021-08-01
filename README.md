@@ -9,11 +9,11 @@ An SG90 is a servo used to control different pieces of equipment. It is a favori
 </p>
 
 
-An SG90 servo is controlled by a pulse sent to it over a 20 millisecond time span, different lengths of pulse determine how the motor will turn. But before we get into how to control the motor, lets first look at how to connect the SG90 to the Raspberry Pi.
+An SG90 servo is controlled by a pulse sent to it over a 20 millisecond time span, different durations of pulse determine how the motor will turn. 
 
-###Wiring Diagram:
+### Wiring Diagram:
 <p>
-Wiring the servo to the Raspberry Pi is rather straight forward: the ground of the servo is connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to any of the GPIO pins but for simplicity connect this to pin 29 (GPIO 5).
+Wiring the servo to the Raspberry Pi is rather straight forward: the ground of the servo is connected to pin 2 (Positive 5V), the positive wire from the servo is connected to pin 6 (Ground) and the pulse control can go to many of the GPIO pins but for simplicity, connect this to pin 29 (GPIO 5).
 </p>
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/GPIOWiringDiagram.png "")
@@ -24,28 +24,28 @@ Wiring the servo to the Raspberry Pi is rather straight forward: the ground of t
 
 <br><br>
 
-###Pulse Control Diagram:
-A pulse is where a signal of high polarity sent from a GPIO of the Raspberry Pi pin to SG90 Servo, for a certain amount of time, which will make the motor turn in one direction or the other. The duration of time between pulses must add up to 20 milliseconds. If a pulse is one millisecond, the next pulse sent to the servo must take place no sooner than 19 milliseconds later. The amount of time the pulse is sent, determines how the servo will rotate. For example, if a pulse is sent to the servo for 1 millisecond the motor will move towards 0 degrees.
+### Pulse Control Diagram:
+A pulse is where a signal of high polarity is sent from a GPIO pin of the Raspberry Pi to SG90 Servo for a given amount of time. The pulse will make the motor turn in one direction or the other. The duration of time between pulses must add up to 20 milliseconds. If a pulse is one millisecond, the next pulse sent to the servo must take place no sooner than 19 milliseconds later. The amount of time the pulse is sent, determines how the servo will rotate. For example, if a pulse is sent to the servo for 1 millisecond the motor will move towards 0 degrees or to the left.
 
 ![Alt text](https://raw.githubusercontent.com/StuartSmith/RaspberryPi-Control-Sg90-Example/master/Images/PulseControl.jpg "")
 
-###Specification for pulse control 
+### Specification for pulse control 
 * A pulse of 1 millisecond will move the servo towards 0 degrees
 * A pulse of 1.5 millisecond will move the servo towards 90 degrees
 * A pulse of 2  millisecond will move the servo towards 180 degrees
 
-###What was found through trial and error with the Raspberry Pi
+### What was found through trial and error with the Raspberry Pi
 * A pulse of .4 millisecond will move the servo towards 0 degrees
 * A pulse of 1.2 millisecond will move the servo towards 90 degrees
 * A pulse of 2  millisecond will move the servo towards 180 degrees
 <br><br>
 
 
-####Video of SG90
+#### Video of SG90
 Click on the image to watch the video<br>
 [![SG90 in action](http://img.youtube.com/vi/v_Ni77Dx_HM/0.jpg)](http://www.youtube.com/watch?v=v_Ni77Dx_HM)
 
-####Source code
+#### Source code
 
 The SG 90 servo is controlled through one object SG90MotorController, below is the source code for this class.
 <br>
