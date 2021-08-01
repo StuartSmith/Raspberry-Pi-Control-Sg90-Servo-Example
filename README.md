@@ -1,6 +1,6 @@
 # RaspberryPi-Control-SG90-Example
 <p>
-How to control an SG90 Servo from a Raspberry Pi using Windows 10 IOT core.
+How to control an SG90 Servo motor from a Raspberry Pi using Windows 10 IOT core.
 
 </p>
 <p>
